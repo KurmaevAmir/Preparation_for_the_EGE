@@ -12,6 +12,6 @@ for n, option in enumerate(options_list):
             if option.count(letter) != 1:
                 cond = False
                 break
-        if cond and abs(n - int(str(n)[::-1])) == 26655:
+        if cond and abs(n - options_list.index(option[::-1])) == 26655:
             print(n + 1)
             break
