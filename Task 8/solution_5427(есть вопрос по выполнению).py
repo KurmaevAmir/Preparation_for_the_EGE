@@ -1,7 +1,7 @@
 from itertools import product
 
-abc = ["К", "Е", "Г", "Э"]
-numbers = ["0", "2", "3"]
+abc = ["1", "2", "3", "4"]
+numbers = ["5", "6", "7"]
 abc.sort()
 numbers.sort()
 symbols = abc + numbers
@@ -10,6 +10,7 @@ options_list.sort()
 symbols_duplicate = [i * 2 for i in symbols]
 count = 0
 for option in options_list:
+    count += 1
     if option[0] in numbers:
         cond = True
         for symbol in symbols_duplicate:
@@ -17,5 +18,5 @@ for option in options_list:
                 cond = False
                 break
         if cond:
-            count += 1
+            break
 print(count)
