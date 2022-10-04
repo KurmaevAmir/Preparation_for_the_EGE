@@ -14,7 +14,7 @@ while count != 5:
         continue
     else:
         f = sum(intermediate_list) // len(intermediate_list)
-    if f % 31 == 13:
-        count += 1
-        print(start, f)
+        if f % 31 == 13:
+            count += 1
+            print(start, f)
     start += 1
