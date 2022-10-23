@@ -1,30 +1,32 @@
-def insert_number(start, stop, mass, number):
-    count_insert = 0
-    for i in range(stop):
-        del mass[i]
-        mass.insert(i, str(number)[count_insert])
-        count_insert += 1
-    return mass
-
-
-x = [""]
+x = ""
 count_x = 0
+count_start = 0
+intermediate_list = []
+cond = True
+digit = 10
 count = 0
-count_digit = 1
-while count != 5:
-    mask = f"12345{''.join(x)}76"
+while count_start != 5:
+    mask = f"12345{x}76"
     if int(mask) % 73 == 0:
         print(mask, int(mask) // 73)
-        count += 1
-    if "".join(x)[count_digit - 1:len(str(count_x))] == "9" * count_digit:
-        x.insert(0, "0")
-        count_digit += 1
-        count_x = 0
-    if x == [""]:
-        x = ["0"]
-        count_x = -1
-    elif count_x == 10 ** (count_digit - 1) and count_digit > 1:
-        x = insert_number(count_digit - 2, len(x), x, count_x)
+        count_start += 1
+    if x == "":
+        x = 0
+    elif cond:
+        if len(intermediate_list) == digit:
+            cond = False
+            digit *= 10
+            x = "0" + str(intermediate_list[0])
+            count = 1
+        else:
+            intermediate_list.append(x)
+            count_x += 1
+            x = str(count_x)
     else:
-        x = insert_number(count_digit - 1, len(x), x, count_x)
-    count_x += 1
+        if count == len(intermediate_list):
+            cond = True
+            count_x += 1
+            x = str(count_x)
+            continue
+        x = "0" + str(intermediate_list[count])
+        count += 1
