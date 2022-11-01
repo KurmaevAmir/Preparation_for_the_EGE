@@ -17,7 +17,8 @@ def analyze_file(file):
                 max_n7 = max(max_n7, number)
             elif number % 2 == 0:
                 max_n2 = max(max_n2, number)
-            max_n = max(max_n, number)
+            else:
+                max_n = max(max_n, number)
         print(max((max_n * max_n14), (max_n2 * max_n7)))
 
 
