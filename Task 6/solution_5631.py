@@ -17,3 +17,4 @@ for i in range(2):
     y += -4
     goto(x * n, y * n)
 done()
+# 20
