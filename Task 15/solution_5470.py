@@ -8,4 +8,4 @@ for i in range(1000):
                 break
         if cond:
             n_min = min(n_min, abs(j - i))
-print(n_min)
+print(n_min + 1)
