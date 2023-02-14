@@ -1,4 +1,27 @@
 from math import sqrt
+import re
+
+
+def main_1():
+    count = 0
+    pattern = r'[1,2,3,4,5,6,7,8,9]{1}6[\d]*6[\d]*[\d]{1}6'
+    for mask in range(16606, 1000000):
+        if re.fullmatch(pattern, str(mask)):
+            definitive_list = []
+            for i in range(1, int(sqrt(mask)) + 1):
+                if mask % i == 0:
+                    definitive_list.append(i)
+                    if mask // i != i:
+                        definitive_list.append(mask // i)
+            if (6 in definitive_list) and (7 in definitive_list) and (8 in definitive_list):
+                count += 1
+                print(mask, sum(definitive_list))
+                if count == 7:
+                    return
+
+
+
+
 
 
 def main():
@@ -40,4 +63,4 @@ def main():
                         break
             else:
                 break
-main()
+main_1()
