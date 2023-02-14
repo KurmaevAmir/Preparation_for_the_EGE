@@ -3,7 +3,7 @@ from math import sqrt
 
 def main():
     count = 0
-    question_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,]
+    question_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     star_list = [""]
     for question in question_list[1:]:
         for star in star_list:
