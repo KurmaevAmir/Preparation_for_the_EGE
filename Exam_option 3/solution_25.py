@@ -15,6 +15,8 @@ def main():
                         for question2 in question_list:
                             definitive_list = []
                             mask = int(f'{question}6{star}6{star2}{question2}6')
+                            print(mask) # сразу переходит на шестизначное число после того,
+                            # как поставил на первое место 1
                             if star2 != "":
                                 if int(star2) % 10 == 0:
                                     cond = False
@@ -29,7 +31,7 @@ def main():
                                     definitive_list.append(i)
                                     if mask // i != i:
                                         definitive_list.append(mask // i)
-                            if 6 in definitive_list and 7 in definitive_list and 8 in definitive_list:
+                            if (6 in definitive_list) and (7 in definitive_list) and (8 in definitive_list):
                                 count += 1
                                 print(mask, sum(definitive_list))
                                 if count == 7:
@@ -38,6 +40,4 @@ def main():
                         break
             else:
                 break
-
-
 main()
