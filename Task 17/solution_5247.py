@@ -17,11 +17,11 @@ with open("Files/5247", "r") as f:
         remainder_list.append(str(sum_number))
         sum_number = "".join(remainder_list)
         if len(sum_number) % 2 == 0:
-            if sum_number[len(sum_number) // 2:] == sum_number[:len(sum_number) // 2]:
+            if sum_number[len(sum_number) // 2:][::-1] == sum_number[:len(sum_number) // 2]:
                 if (numbers_list[i] + numbers_list[i + 1] + numbers_list[i + 2]) / 3 > average:
                     total_list.append(numbers_list[i] + numbers_list[i + 1] + numbers_list[i + 2])
         else:
-            if sum_number[len(sum_number) // 2 + 1:] == sum_number[:len(sum_number) // 2]:
+            if sum_number[len(sum_number) // 2 + 1:][::-1] == sum_number[:len(sum_number) // 2]:
                 if (numbers_list[i] + numbers_list[i + 1] + numbers_list[i + 2]) / 3 > average:
                     total_list.append(numbers_list[i] + numbers_list[i + 1] + numbers_list[i + 2])
 print(len(total_list), min(total_list))
