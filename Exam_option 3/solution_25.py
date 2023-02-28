@@ -1,4 +1,5 @@
 from math import sqrt
+
 import re
 
 
@@ -18,10 +19,6 @@ def main_1():
                 print(mask, sum(definitive_list))
                 if count == 7:
                     return
-
-
-
-
 
 
 def main():
@@ -63,4 +60,7 @@ def main():
                         break
             else:
                 break
+
+
+# main()
 main_1()

@@ -4,12 +4,14 @@ def function(n):
     elif n > 1 and n % 3 == 0:
         return n + function(n // 3 - 1)
     elif n > 1 and n % 3 != 0:
-        return False
+        return n + function(n + 3)
 
 
-for i in range(1000):
-    answer_function = function(i)
-    if answer_function is not False:
+for i in range(2000):
+    try:
+        answer_function = function(i)
         if answer_function > 1000:
             print(i)
             break
+    except:
+        continue
