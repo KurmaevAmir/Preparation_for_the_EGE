@@ -19,4 +19,4 @@ for i in range(-5, 10):
         goto(i * n, j * n)
         dot()
 done()
-# 8
+# 31
