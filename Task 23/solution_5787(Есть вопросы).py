@@ -7,4 +7,4 @@ for i in range(3, 28):
     if i % 2 != 0 and i // 2 >= 2:
         a += massive[i // 2]
     massive[i] = a
-print(massive[27])
+print(massive)
