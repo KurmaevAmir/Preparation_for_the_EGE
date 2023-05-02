@@ -10,9 +10,10 @@ with open("Files/6057", "r") as f:
             if s[i] == s[i + 1]:
                 count += 1
             else:
-                if count > m:
+                if count >= m:
                     m = count
                     a = s[i]
+                count = 1
         if count > m:
             m = count
             a = s[i]
