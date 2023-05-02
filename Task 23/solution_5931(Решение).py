@@ -8,5 +8,6 @@ for i in range(49, 0, -1):
         if i * 7 + j <= 50:
             a += massive[i * 7 + j]
     massive[i] = a
+print(massive)
 print(massive[1])
 

@@ -4,9 +4,12 @@ with open("Files/3529", "r") as f:
     total_list = []
     cond = True
     for i in range(len(abc)):
-        if abc[i] == "A" and cond:
-            cond = False
-            count += 1
+        if abc[i] == "A":
+            if cond:
+                cond = False
+                count += 1
+            else:
+                count = 1
         elif cond is False and abc[i] == "F":
             count += 1
             cond = True
