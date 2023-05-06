@@ -20,10 +20,10 @@ with open("Files/4105", "r") as f:
         else:
             if count == 2:
                 total_list.append(sum(abc_list))
-                abc_list[0] = 1
-                count = 0
-                abc_list[1] = 0
-                abc_list[2] = 0
+            abc_list[0] = 1
+            count = 0
+            abc_list[1] = 0
+            abc_list[2] = 0
     if count == 2:
         total_list.append(sum(abc_list))
 print(max(total_list))
