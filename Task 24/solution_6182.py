@@ -12,4 +12,14 @@ with open("Files/6182", "r") as f:
                 elif abc[j] == "A":
                     break
                 count += 1
+        elif abc[i] == "D":
+            count = 1
+            for j in range(i + 1, len(abc)):
+                if abc[j] == "A":
+                    count += 1
+                    total_list.append(count)
+                    break
+                elif abc[j] == "D":
+                    break
+                count += 1
 print(max(total_list))

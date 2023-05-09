@@ -8,12 +8,14 @@ with open("Files/4919", "r") as f:
             for j in range(i + 1, len(abc)):
                 if abc[j] == "F":
                     count_f += 1
+                    substring_length += 1
                     if count_f == 3:
                         break
                 elif abc[j] == "B":
                     substring_length += 1
                     if count_f == 2 and substring_length >= 20:
                         count += 1
+                        break
                     else:
                         break
                 elif abc[j] == "A":
