@@ -1,8 +1,7 @@
 import math
 
 count = 0
-k = 0
-n = 500000000 + k
+k = 1
 while count != 5:
     n = 500000000 + k
     intermediate_list = []
