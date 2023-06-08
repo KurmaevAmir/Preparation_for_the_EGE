@@ -30,6 +30,7 @@ with open("Files/4213", "r") as f:
     sum_total = sum(total_list)
     difference = s - sum_total
     k = len(total_count_list)
+    print(total_list)
     for j in range(-count, 0, 2):
         for i in range(k, len(mass)):
             if 2 * mass[i][0] - 2 * total_list[j] <= difference:
@@ -39,4 +40,5 @@ with open("Files/4213", "r") as f:
                 k += 1
                 total_list[j] = mass[i][0]
                 total_list[j + 1] = mass[i][0]
+    print(total_count_list)
     print(max(total_list), max(total_count_list))
